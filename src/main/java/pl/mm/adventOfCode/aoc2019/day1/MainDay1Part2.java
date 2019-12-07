@@ -22,7 +22,7 @@ public class MainDay1Part2 extends MainRunnerBase {
 
     @Override
     public void run(String[] args) throws IOException {
-        this.logger.info("*** Day 2: The Tyranny of the Rocket Equation ***");
+        this.logger.info("*** Day 1: The Tyranny of the Rocket Equation ***");
         this.logger.info("Part 2");
 
         ClassPathResource classPathResource = new ClassPathResource("data/day1/input.txt");
@@ -32,7 +32,7 @@ public class MainDay1Part2 extends MainRunnerBase {
         double totalFuelRequired = this.rocketEquationDay1Part2.calculatedRequiredFuelForAllModuleAndReturnTotalFuelRequired(listOfModulesMass);
         this.logger.info("Total fuel required: " + totalFuelRequired);
 
-        this.logger.info("*** Day 2: Ended ***");
+        this.logger.info("*** Day 1: Ended ***");
     }
 
 }
