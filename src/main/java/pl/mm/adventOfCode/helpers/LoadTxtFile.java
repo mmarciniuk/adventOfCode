@@ -25,4 +25,5 @@ public class LoadTxtFile implements LoadFile {
         }
         return loadedLines;
     }
+
 }

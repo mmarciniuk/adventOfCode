@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.MainRunnerBase;
-import pl.mm.adventOfCode.helpers.DoubleConverterImpl;
 import pl.mm.adventOfCode.helpers.LoadTxtFile;
 
 import java.io.IOException;
@@ -26,7 +25,7 @@ public class MainDay1Part1 extends MainRunnerBase {
 
         ClassPathResource classPathResource = new ClassPathResource("data/day1/input.txt");
         List<String> listOfLoadedLines = this.loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
-        List<Double> listOfModulesMass = this.doubleConverter.convertValues(listOfLoadedLines);
+        List<Double> listOfModulesMass = this.doubleConverter.convert(listOfLoadedLines);
 
         double totalFuelRequired = this.rocketEquationDay1.calculatedRequiredFuelForAllModuleAndReturnTotalFuelRequired(listOfModulesMass);
         this.logger.info("Total fuel required: " + totalFuelRequired);

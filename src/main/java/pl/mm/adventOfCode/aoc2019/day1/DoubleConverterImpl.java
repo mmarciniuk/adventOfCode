@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.helpers;
+package pl.mm.adventOfCode.aoc2019.day1;
 
 import org.springframework.stereotype.Component;
 
@@ -9,7 +9,7 @@ import java.util.List;
 public class DoubleConverterImpl implements DoubleConverter {
 
     @Override
-    public List<Double> convertValues(List<String> stringList) {
+    public List<Double> convert(List<String> stringList) {
         List<Double> doubleList = new ArrayList<>();
         for (String line : stringList) {
             try {

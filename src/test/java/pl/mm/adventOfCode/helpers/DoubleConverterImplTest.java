@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.mm.adventOfCode.BaseTest;
 import pl.mm.adventOfCode.Main;
+import pl.mm.adventOfCode.aoc2019.day1.DoubleConverterImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +21,7 @@ public class DoubleConverterImplTest extends BaseTest {
 
     @Test(dataProvider = "testData")
     public void testConvertValues(List<String> input, int numberOfLinesWhichShouldBeLoaded) {
-        List<Double> doubleList = this.doubleConverter.convertValues(input);
+        List<Double> doubleList = this.doubleConverter.convert(input);
         Assert.assertEquals(doubleList.size(), numberOfLinesWhichShouldBeLoaded);
     }
 
