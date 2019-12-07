@@ -21,8 +21,7 @@ public class MainDay2Part1 extends MainRunnerBase {
 
         int[] result = this.intCodeProgram.execute(input);
 
-        this.logger.info("Result: value1 = '" + result[1] + "' value2= '" + result[2] + "' ");
-        this.logger.info("Full result: " + Arrays.toString(result));
+        this.logger.info("Result: '" + result[0] + "'");
 
         this.logger.info("*** Day 2: 1202 Program Alarm - ended ***");
     }
