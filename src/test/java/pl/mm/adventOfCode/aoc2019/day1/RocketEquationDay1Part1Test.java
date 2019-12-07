@@ -7,11 +7,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.mm.adventOfCode.BaseTest;
 
-@SpringBootTest(classes = {RocketEquationDay1.class})
-public class RocketEquationDay1Test extends BaseTest {
+@SpringBootTest(classes = {RocketEquationDay1Part1.class})
+public class RocketEquationDay1Part1Test extends BaseTest {
 
     @Autowired
-    private RocketEquationDay1 rocketEquationDay1;
+    private RocketEquationDay1Part1 rocketEquationDay1;
 
     @Test(dataProvider = "dataProvider")
     public void testCalculatedRequiredFlue(double mass, double correctResult) {

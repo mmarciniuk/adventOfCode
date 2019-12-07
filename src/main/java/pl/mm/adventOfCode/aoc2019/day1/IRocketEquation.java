@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.aoc2019;
+package pl.mm.adventOfCode.aoc2019.day1;
 
 import java.util.List;
 

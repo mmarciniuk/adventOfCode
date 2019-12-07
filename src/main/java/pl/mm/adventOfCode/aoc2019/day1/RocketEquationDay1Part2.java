@@ -1,12 +1,12 @@
-package pl.mm.adventOfCode.aoc2019.day2;
+package pl.mm.adventOfCode.aoc2019.day1;
 
 import org.springframework.stereotype.Component;
-import pl.mm.adventOfCode.aoc2019.IRocketEquation;
+import pl.mm.adventOfCode.aoc2019.day1.IRocketEquation;
 
 import java.util.List;
 
 @Component
-public class RocketEquationDay2 implements IRocketEquation {
+public class RocketEquationDay1Part2 implements IRocketEquation {
 
     @Override
     public double calculatedRequiredFuelForModuleAndAddToTotal(double massOfModule) {
