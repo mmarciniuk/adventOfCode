@@ -13,11 +13,14 @@ public class StringListToIntArrayImpl implements StringListToIntArray {
         List<Integer> integerList = new ArrayList<>();
 
         for (String line : stringList) {
-
+            String[] stringArray = line.split(",");
+            for (String element : stringArray) {
+                element = element.trim();
+                integerList.add(Integer.valueOf(element));
+            }
         }
 
-
-        return new int[0];
+        return integerList.stream().mapToInt(i -> i).toArray();
     }
 
 }
