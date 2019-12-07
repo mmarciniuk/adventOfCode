@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.aoc2019.d1;
+package pl.mm.adventOfCode.aoc2019.day1;
 
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.aoc2019.IRocketEquation;

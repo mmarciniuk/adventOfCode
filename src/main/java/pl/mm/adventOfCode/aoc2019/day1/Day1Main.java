@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.aoc2019.d1;
+package pl.mm.adventOfCode.aoc2019.day1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
