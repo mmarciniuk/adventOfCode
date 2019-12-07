@@ -18,12 +18,14 @@ public class RocketEquationDay1 implements IRocketEquation {
         this.totalFuelRequired = 0;
     }
 
-    public double calculatedRequiredFuelForModuleAndAddToTotal(double mass) {
-        double fuelRequiredForModule = Math.floor((mass / 3)) - 2;
+    @Override
+    public double calculatedRequiredFuelForModuleAndAddToTotal(double massOfModule) {
+        double fuelRequiredForModule = Math.floor((massOfModule / 3)) - 2;
         this.totalFuelRequired += fuelRequiredForModule;
         return fuelRequiredForModule;
     }
 
+    @Override
     public double calculatedRequiredFuelForAllModuleAndReturnTotalFuelRequired(List<Double> doubleList) {
         for (double doubleValue : doubleList) {
             this.calculatedRequiredFuelForModuleAndAddToTotal(doubleValue);
