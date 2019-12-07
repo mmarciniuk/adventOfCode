@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.d1;
+package pl.mm.adventOfCode.aoc2019.d1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,15 +7,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.mm.adventOfCode.BaseTest;
 
-@SpringBootTest(classes = {RocketEquation.class})
-public class RocketEquationTest extends BaseTest {
+@SpringBootTest(classes = {RocketEquationDay1.class})
+public class RocketEquationDay1Test extends BaseTest {
 
     @Autowired
-    private RocketEquation rocketEquation;
+    private RocketEquationDay1 rocketEquationDay1;
 
     @Test(dataProvider = "dataProvider")
     public void testCalculatedRequiredFlue(double mass, double correctResult) {
-        double actualResult = rocketEquation.calculatedRequiredFuelForModuleAndAddToTotal(mass);
+        double actualResult = rocketEquationDay1.calculatedRequiredFuelForModuleAndAddToTotal(mass);
         Assert.assertEquals(actualResult, correctResult);
     }
 
