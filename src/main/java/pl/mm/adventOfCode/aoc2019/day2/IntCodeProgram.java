@@ -6,6 +6,6 @@ public interface IntCodeProgram {
     final static int MULTIPLIES_CODE = 2;
     final static int EXIT_CODE = 99;
 
-    String execute(String input);
+    int[] execute(int[] input);
 
 }
