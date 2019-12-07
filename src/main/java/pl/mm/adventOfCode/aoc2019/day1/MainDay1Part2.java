@@ -23,6 +23,7 @@ public class MainDay1Part2 extends MainRunnerBase {
     @Override
     public void run(String[] args) throws IOException {
         this.logger.info("*** Day 2: The Tyranny of the Rocket Equation ***");
+        this.logger.info("Part 2");
 
         ClassPathResource classPathResource = new ClassPathResource("data/day1/input.txt");
         List<String> listOfLoadedLines = this.loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());

@@ -1,7 +1,6 @@
 package pl.mm.adventOfCode.aoc2019.day1;
 
 import org.springframework.stereotype.Component;
-import pl.mm.adventOfCode.aoc2019.day1.IRocketEquation;
 
 import java.util.List;
 
