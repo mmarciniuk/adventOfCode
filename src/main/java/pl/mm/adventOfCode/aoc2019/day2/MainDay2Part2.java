@@ -25,22 +25,23 @@ public class MainDay2Part2 extends MainRunnerBase {
         List<String> stringList = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
 
         int[] input = stringListToIntArray.convert(stringList);
-        int[] result = new int[input.length];
+        int[] resultArray;
 
+        int valueToFine = 19690720;
         for (int noun = 0; noun < 99; noun++) {
             for (int verb = 0; verb < 99; verb++) {
                 input[1] = noun;
                 input[2] = verb;
 
-                result = this.intCodeProgram.execute(input);
-                if (result[0] == 19690720) {
-                    this.logger.info("Result: noun: '" + noun + "' verb: '" + verb + "'");
+                resultArray = this.intCodeProgram.execute(input);
+                if (resultArray[0] == valueToFine) {
+                    int result = 100 * noun + verb;
+                    this.logger.info("Result: noun: '" + result + "'");
+                    break;
                 }
 
             }
         }
-
-        this.logger.info("Result: '" + result[0] + "'");
 
         this.logger.info("*** Day 2: 1202 Program Alarm - PART 2 - ended ***");
 
