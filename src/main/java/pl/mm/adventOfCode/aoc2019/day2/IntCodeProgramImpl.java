@@ -2,6 +2,8 @@ package pl.mm.adventOfCode.aoc2019.day2;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Component
 public class IntCodeProgramImpl implements IntCodeProgram {
 
@@ -28,28 +30,29 @@ public class IntCodeProgramImpl implements IntCodeProgram {
 
     @Override
     public int[] execute(int[] input) {
+        int[] result = Arrays.copyOf(input, input.length);
 
-        for (int i = 0; i < input.length; i += 4) {
-            int operationCode = input[i];
+        for (int i = 0; i < result.length; i += 4) {
+            int operationCode = result[i];
 
             if (EXIT_CODE == operationCode)
                 break;
 
-            int number1 = getNumber(input, i + 1);
-            int number2 = getNumber(input, i + 2);
-            int positionOfResult = getProperPositionOfResultIndex(input, i + 3);
+            int number1 = getNumber(result, i + 1);
+            int number2 = getNumber(result, i + 2);
+            int positionOfResult = getProperPositionOfResultIndex(result, i + 3);
 
             switch (operationCode) {
                 case ADD_CODE:
-                    input[positionOfResult] = number1 + number2;
+                    result[positionOfResult] = number1 + number2;
                     break;
                 case MULTIPLIES_CODE:
-                    input[positionOfResult] = number1 * number2;
+                    result[positionOfResult] = number1 * number2;
                     break;
             }
         }
 
-        return input;
+        return result;
     }
 
 }

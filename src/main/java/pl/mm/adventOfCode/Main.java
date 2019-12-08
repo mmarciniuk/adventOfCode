@@ -25,9 +25,13 @@ public class Main implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         for (MainRunner mainRunner : this.mainRunnerList) {
-            mainRunner.run(args);
+            try {
+                mainRunner.run(args);
+            } catch (Exception e) {
+                LOGGER.error(e.toString());
+            }
         }
     }
 }
