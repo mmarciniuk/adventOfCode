@@ -9,7 +9,7 @@ import pl.mm.adventOfCode.helpers.LoadTxtFile;
 import java.util.List;
 
 @Component
-public class MainAdventOfCodeDay2Part1 extends MainAdventOfCodeRunnerBase {
+public class ProgramAlarmPart1 extends MainAdventOfCodeRunnerBase {
 
     @Autowired
     private IntCodeProgramImpl intCodeProgram;
@@ -20,7 +20,6 @@ public class MainAdventOfCodeDay2Part1 extends MainAdventOfCodeRunnerBase {
 
     @Override
     public void run(String[] args) throws Exception {
-        this.logger.info("*** Day 2: 1202 Program Alarm ***");
         ClassPathResource classPathResource = new ClassPathResource("data/day2/input.txt");
         List<String> stringList = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
 
@@ -31,8 +30,6 @@ public class MainAdventOfCodeDay2Part1 extends MainAdventOfCodeRunnerBase {
         int[] result = this.intCodeProgram.execute(input);
 
         this.logger.info("Result: '" + result[0] + "'");
-
-        this.logger.info("*** Day 2: 1202 Program Alarm - ended ***");
     }
 
 }

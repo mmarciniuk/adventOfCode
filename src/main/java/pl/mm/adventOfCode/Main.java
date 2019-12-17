@@ -26,9 +26,7 @@ public class Main implements CommandLineRunner {
     public void run(String... args) {
         for (MainAdventOfCodeRunner mainAdventOfCodeRunner : this.mainAdventOfCodeRunnerList) {
             try {
-                mainAdventOfCodeRunner.onDayStart(args);
                 mainAdventOfCodeRunner.run(args);
-                mainAdventOfCodeRunner.onYearEnd(args);
             } catch (Exception e) {
                 LOGGER.error(e.toString());
             }
