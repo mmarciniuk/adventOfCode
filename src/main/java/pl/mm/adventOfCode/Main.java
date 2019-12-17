@@ -16,19 +16,19 @@ public class Main implements CommandLineRunner {
     private static Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     @Autowired
-    private List<MainRunner> mainRunnerList = new ArrayList<>();
+    private List<MainAdventOfCodeRunner> mainAdventOfCodeRunnerList = new ArrayList<>();
 
     public static void main(String[] args) {
-        LOGGER.info("Advent of Code");
         SpringApplication.run(Main.class, args);
-        LOGGER.info("Advent of Code");
     }
 
     @Override
     public void run(String... args) {
-        for (MainRunner mainRunner : this.mainRunnerList) {
+        for (MainAdventOfCodeRunner mainAdventOfCodeRunner : this.mainAdventOfCodeRunnerList) {
             try {
-                mainRunner.run(args);
+                mainAdventOfCodeRunner.onDayStart(args);
+                mainAdventOfCodeRunner.run(args);
+                mainAdventOfCodeRunner.onYearEnd(args);
             } catch (Exception e) {
                 LOGGER.error(e.toString());
             }

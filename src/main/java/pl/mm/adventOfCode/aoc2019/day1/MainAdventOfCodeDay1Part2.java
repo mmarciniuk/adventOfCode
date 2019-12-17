@@ -3,14 +3,14 @@ package pl.mm.adventOfCode.aoc2019.day1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
-import pl.mm.adventOfCode.MainRunnerBase;
+import pl.mm.adventOfCode.MainAdventOfCodeRunnerBase;
 import pl.mm.adventOfCode.helpers.LoadTxtFile;
 
 import java.io.IOException;
 import java.util.List;
 
 @Component
-public class MainDay1Part2 extends MainRunnerBase {
+public class MainAdventOfCodeDay1Part2 extends MainAdventOfCodeRunnerBase {
 
     @Autowired
     private LoadTxtFile loadTxtFile;
