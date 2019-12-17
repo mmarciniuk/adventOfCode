@@ -9,7 +9,7 @@ import pl.mm.adventOfCode.helpers.LoadTxtFile;
 import java.util.List;
 
 @Component
-public class ProgramAlarmPart2 extends MainAdventOfCodeRunnerBase {
+public class MainProgramAlarmPart2 extends MainAdventOfCodeRunnerBase {
 
     @Autowired
     private IntCodeProgramImpl intCodeProgram;

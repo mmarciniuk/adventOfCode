@@ -7,7 +7,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.mm.adventOfCode.BaseTest;
 import pl.mm.adventOfCode.Main;
-import pl.mm.adventOfCode.aoc2019.day1.RocketEquationDay1Part2;
 
 @SpringBootTest(classes = {Main.class})
 public class RocketEquationDay1Part2Test extends BaseTest {

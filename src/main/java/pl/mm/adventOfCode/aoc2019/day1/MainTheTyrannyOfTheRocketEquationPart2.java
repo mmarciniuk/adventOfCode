@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class TheTyrannyOfTheRocketEquationPart2 extends MainAdventOfCodeRunner2019 {
+public class MainTheTyrannyOfTheRocketEquationPart2 extends MainAdventOfCodeRunner2019 {
 
     @Autowired
     private LoadTxtFile loadTxtFile;
