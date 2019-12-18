@@ -21,7 +21,7 @@ public class MainTheTyrannyOfTheRocketEquationPart2 extends MainAdventOfCodeRunn
 
     @Override
     public void run(String[] args) throws IOException {
-        ClassPathResource classPathResource = new ClassPathResource("data/day1/input.txt");
+        ClassPathResource classPathResource = new ClassPathResource("data/aoc2019/day1/input.txt");
         List<String> listOfLoadedLines = this.loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
         List<Double> listOfModulesMass = this.doubleConverter.convert(listOfLoadedLines);
 

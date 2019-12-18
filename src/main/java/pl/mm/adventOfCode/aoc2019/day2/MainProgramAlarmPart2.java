@@ -20,7 +20,7 @@ public class MainProgramAlarmPart2 extends MainAdventOfCodeRunnerBase {
 
     @Override
     public void run(String[] args) throws Exception {
-        ClassPathResource classPathResource = new ClassPathResource("data/day2/input.txt");
+        ClassPathResource classPathResource = new ClassPathResource("data/aoc2019/day2/input.txt");
         List<String> stringList = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
 
         int[] input = stringListToIntArray.convert(stringList);
@@ -35,7 +35,7 @@ public class MainProgramAlarmPart2 extends MainAdventOfCodeRunnerBase {
                 resultArray = this.intCodeProgram.execute(input);
                 if (resultArray[0] == valueToFine) {
                     int result = 100 * noun + verb;
-                    this.logger.info("Result: noun: '" + result + "'");
+                    this.logger.info("Result: '" + result + "'");
                     break;
                 }
 

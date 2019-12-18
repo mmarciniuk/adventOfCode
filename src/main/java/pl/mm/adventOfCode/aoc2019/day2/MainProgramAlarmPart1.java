@@ -20,7 +20,7 @@ public class MainProgramAlarmPart1 extends MainAdventOfCodeRunnerBase {
 
     @Override
     public void run(String[] args) throws Exception {
-        ClassPathResource classPathResource = new ClassPathResource("data/day2/input.txt");
+        ClassPathResource classPathResource = new ClassPathResource("data/aoc2019/day2/input.txt");
         List<String> stringList = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
 
         int[] input = stringListToIntArray.convert(stringList);
