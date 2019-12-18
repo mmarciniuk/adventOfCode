@@ -13,7 +13,7 @@ public class CrossedWiresImpl implements CrossedWires {
     private Point centralPort = new Point();
     private final List<Cable> cableList = new ArrayList<>();
 
-    protected int calculateDistanceBetweenTwoPoints(Point p, Point q) {
+    private int calculateDistanceBetweenTwoPoints(Point p, Point q) {
         return Math.abs(p.x - q.x) + Math.abs(p.y - q.y);
     }
 
