@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Cable {
+public class Wire {
 
     @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     private final List<Point> layout = new ArrayList<>(Collections.singleton(new Point()));
@@ -29,11 +29,11 @@ public class Cable {
         this.layout.add(new Point(point));
     }
 
-    public Cable addLayout(String pathOfCable) {
+    public Wire addLayout(String pathOfCable) {
         return this.addLayout(pathOfCable.split(","));
     }
 
-    public Cable addLayout(String[] pathOfCable) {
+    public Wire addLayout(String[] pathOfCable) {
         Point point = new Point();
         for (String direction : pathOfCable) {
             int lengthOfCabalToAdd = this.getLengthOfCabalToAdd(direction);
@@ -78,9 +78,9 @@ public class Cable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cable cable = (Cable) o;
-        return length == cable.length &&
-                layout.equals(cable.layout);
+        Wire wire = (Wire) o;
+        return length == wire.length &&
+                layout.equals(wire.layout);
     }
 
     @Override

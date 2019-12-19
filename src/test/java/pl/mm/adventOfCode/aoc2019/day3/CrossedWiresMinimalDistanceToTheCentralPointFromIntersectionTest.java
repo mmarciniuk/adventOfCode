@@ -8,12 +8,12 @@ import pl.mm.adventOfCode.BaseTest;
 import java.util.Arrays;
 import java.util.List;
 
-public class CrossedWiresImplTest extends BaseTest {
+public class CrossedWiresMinimalDistanceToTheCentralPointFromIntersectionTest extends BaseTest {
 
     @Test(dataProvider = "dataProvider")
     public void testDistanceCalculation(List<String> listOfPath, int expectedDistance) {
-        CrossedWiresImpl crossedWires = new CrossedWiresImpl();
-        int distance = crossedWires.calculateMinDistanceToTheCentralPort(listOfPath);
+        CrossedWiresMinimalDistanceToTheCentralPointFromIntersection crossedWires = new CrossedWiresMinimalDistanceToTheCentralPointFromIntersection();
+        int distance = crossedWires.calculate(listOfPath);
         Assert.assertEquals(distance, expectedDistance);
     }
 

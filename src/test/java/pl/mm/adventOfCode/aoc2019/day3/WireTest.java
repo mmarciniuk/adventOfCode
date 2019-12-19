@@ -5,20 +5,20 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CableTest {
+public class WireTest {
 
-    private Cable cable;
+    private Wire wire;
 
     @BeforeMethod
     public void initForTest() {
-        cable = new Cable();
+        wire = new Wire();
     }
 
     @Test(dataProvider = "dataProvider")
     public void testAddLayoutToCable(String path, int expectedCableLength) {
         String[] pathArray = path.split(",");
-        cable.addLayout(pathArray);
-        Assert.assertEquals(cable.getLength(), expectedCableLength);
+        wire.addLayout(pathArray);
+        Assert.assertEquals(wire.getLength(), expectedCableLength);
     }
 
     @DataProvider(name = "dataProvider")

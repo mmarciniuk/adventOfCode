@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface CrossedWires {
 
-    int calculateMinDistanceToTheCentralPort(List<String> cablePaths);
+    int calculate(List<String> cablePaths);
 
 }
