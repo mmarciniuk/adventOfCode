@@ -3,6 +3,10 @@ package pl.mm.adventOfCode.aoc2019.day4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.aoc2019.MainAdventOfCodeRunner2019;
+import pl.mm.adventOfCode.aoc2019.day4.rule.FromLeftToRightIncrease;
+import pl.mm.adventOfCode.aoc2019.day4.rule.MaxNumberLength;
+import pl.mm.adventOfCode.aoc2019.day4.rule.TwoAdjacentDigitsAreTheSame;
+import pl.mm.adventOfCode.aoc2019.day4.rule.ValueWithinTheClosedRange;
 
 @Component
 public class MainSecureContainerPart1 extends MainAdventOfCodeRunner2019 {
@@ -12,11 +16,16 @@ public class MainSecureContainerPart1 extends MainAdventOfCodeRunner2019 {
 
     @Override
     public void run(String[] args) {
-        /*int numberLength = 6;
+        int numberLength = 6;
         int startRange = 193651;
-        int endRange = 649729;*/
+        int endRange = 649729;
 
-        int result = numberOfPossiblePasswordsWithinTheRange.calculate();
+        numberOfPossiblePasswordsWithinTheRange.addRule(new MaxNumberLength(numberLength))
+                .addRule(new ValueWithinTheClosedRange(startRange, endRange))
+                .addRule(new TwoAdjacentDigitsAreTheSame())
+                .addRule(new FromLeftToRightIncrease());
+
+        int result = numberOfPossiblePasswordsWithinTheRange.calculate(startRange, endRange);
 
         logger.info("How many different passwords within the range given in your puzzle input meet these criteria?");
         logger.info("Result: '" + result + "'");
