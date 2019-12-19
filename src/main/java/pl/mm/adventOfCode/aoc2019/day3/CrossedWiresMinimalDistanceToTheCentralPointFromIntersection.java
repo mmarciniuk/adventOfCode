@@ -15,12 +15,11 @@ public class CrossedWiresMinimalDistanceToTheCentralPointFromIntersection extend
     }
 
     @Override
-    public int calculate(List<String> cablePaths) {
-        for (String path : cablePaths) {
-            wireList.add(new Wire().addLayout(path));
-        }
+    public int calculate(String pathForWire1, String pathForWire2) {
+        this.wire1.addLayout(pathForWire1);
+        this.wire2.addLayout(pathForWire2);
 
-        List<Point> listOfCrossingPoints = iterateOverTheCablesAndFindCrossingPoints();
+        List<Point> listOfCrossingPoints = this.findCrossingPoints();
 
         List<Integer> integerList = new ArrayList<>();
         for (Point point : listOfCrossingPoints) {

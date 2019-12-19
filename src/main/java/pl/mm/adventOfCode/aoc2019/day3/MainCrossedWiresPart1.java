@@ -20,9 +20,11 @@ public class MainCrossedWiresPart1 extends MainAdventOfCodeRunner2019 {
     @Override
     public void run(String[] args) throws IOException {
         ClassPathResource classPathResource = new ClassPathResource("data/aoc2019/day3/input.txt");
-        List<String> listOfCablePaths = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
+        List<String> listOfWirePaths = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
+        String pathForWire1 = listOfWirePaths.get(0);
+        String pathForWire2 = listOfWirePaths.get(1);
 
-        int minDistanceToPort = crossedWires.calculate(listOfCablePaths);
+        int minDistanceToPort = crossedWires.calculate(pathForWire1, pathForWire2);
 
         logger.info("What is the Manhattan distance from the central port to the closest intersection?");
         logger.info("Distance from port to closest intersection = '" + minDistanceToPort + "'");

@@ -20,9 +20,11 @@ public class MainCrossedWiresPart2 extends MainAdventOfCodeRunner2019 {
     @Override
     public void run(String[] args) throws IOException {
         ClassPathResource classPathResource = new ClassPathResource("data/aoc2019/day3/input.txt");
-        List<String> listOfCablePaths = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
+        List<String> listOfWirePaths = loadTxtFile.loadFile(classPathResource.getFile().getAbsolutePath());
+        String pathForWire1 = listOfWirePaths.get(0);
+        String pathForWire2 = listOfWirePaths.get(1);
 
-        int minDistanceToIntersection = crossedWires.calculate(listOfCablePaths);
+        int minDistanceToIntersection = crossedWires.calculate(pathForWire1, pathForWire2);
 
         logger.info("What is the fewest combined steps the wires must take to reach an intersection?");
         logger.info("Result = '" + minDistanceToIntersection + "'");

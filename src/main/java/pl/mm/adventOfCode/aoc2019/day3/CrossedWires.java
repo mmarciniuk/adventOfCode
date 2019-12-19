@@ -1,9 +1,7 @@
 package pl.mm.adventOfCode.aoc2019.day3;
 
-import java.util.List;
-
 public interface CrossedWires {
 
-    int calculate(List<String> cablePaths);
+    int calculate(String pathForWire1, String pathForWire2);
 
 }
