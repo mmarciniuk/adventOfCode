@@ -9,10 +9,6 @@ public abstract class CrossedWiresBase implements CrossedWires {
     protected Point centralPort = new Point();
     protected final List<Wire> wireList = new ArrayList<>();
 
-    protected int calculateDistanceBetweenTwoPoints(Point p, Point q) {
-        return Math.abs(p.x - q.x) + Math.abs(p.y - q.y);
-    }
-
     protected java.util.List<Point> iterateOverTheCablesAndFindCrossingPoints() {
         java.util.List<Point> listOfCrossingPoints = new ArrayList<>();
         for (int i = 0; i < wireList.size(); i++) {

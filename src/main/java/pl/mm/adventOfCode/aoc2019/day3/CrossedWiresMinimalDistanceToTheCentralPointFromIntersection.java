@@ -10,6 +10,10 @@ import java.util.List;
 @Component
 public class CrossedWiresMinimalDistanceToTheCentralPointFromIntersection extends CrossedWiresBase {
 
+    protected int calculateDistanceBetweenTwoPoints(Point p, Point q) {
+        return Math.abs(p.x - q.x) + Math.abs(p.y - q.y);
+    }
+
     @Override
     public int calculate(List<String> cablePaths) {
         for (String path : cablePaths) {
