@@ -26,10 +26,10 @@ public class CrossedWiresImplMinimalStepsNeededToReachIntersection extends Cross
     private int calculateMinimalStepsToPoint(Wire wire, Point stopPoint) {
         int minimalSteps = 0;
         for (Point wirePoint : wire.getLayout()) {
-            minimalSteps++;
             if (wirePoint.equals(stopPoint)) {
                 break;
             }
+            minimalSteps++;
         }
         return minimalSteps;
     }
