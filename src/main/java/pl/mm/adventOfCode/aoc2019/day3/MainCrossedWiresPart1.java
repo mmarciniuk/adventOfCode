@@ -27,7 +27,7 @@ public class MainCrossedWiresPart1 extends MainAdventOfCodeRunner2019 {
         int minDistanceToPort = crossedWires.calculate(pathForWire1, pathForWire2);
 
         logger.info("What is the Manhattan distance from the central port to the closest intersection?");
-        logger.info("Distance from port to closest intersection = '" + minDistanceToPort + "'");
+        logger.info("Result = '" + minDistanceToPort + "'");
     }
 
 }

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CrossedWiresImplStepsNeededToReachIntersectionTest {
+public class CrossedWiresImplMinimalStepsNeededToReachIntersectionTest {
 
     @Test(dataProvider = "dataProvider")
     public void testStepsNeededToReachIntersection(List<String> listOfPath, int expectedDistance) {

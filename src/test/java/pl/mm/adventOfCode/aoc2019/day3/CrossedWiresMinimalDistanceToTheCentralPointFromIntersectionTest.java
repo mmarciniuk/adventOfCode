@@ -10,8 +10,8 @@ public class CrossedWiresMinimalDistanceToTheCentralPointFromIntersectionTest ex
     @Test(dataProvider = "dataProvider")
     public void testDistanceCalculation(String pathForWire1, String pathForWire2, int expectedDistance) {
         CrossedWiresMinimalDistanceToTheCentralPointFromIntersection crossedWires = new CrossedWiresMinimalDistanceToTheCentralPointFromIntersection();
-        int distance = crossedWires.calculate(pathForWire1, pathForWire2);
-        Assert.assertEquals(distance, expectedDistance);
+        int minimalStepsToInterception = crossedWires.calculate(pathForWire1, pathForWire2);
+        Assert.assertEquals(minimalStepsToInterception, expectedDistance);
     }
 
     @DataProvider(name = "dataProvider")

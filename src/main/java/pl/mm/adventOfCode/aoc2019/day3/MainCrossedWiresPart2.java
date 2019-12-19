@@ -15,7 +15,7 @@ public class MainCrossedWiresPart2 extends MainAdventOfCodeRunner2019 {
     @Autowired
     private LoadTxtFile loadTxtFile;
     @Autowired
-    CrossedWiresImplStepsNeededToReachIntersection crossedWires;
+    CrossedWiresImplMinimalStepsNeededToReachIntersection crossedWires;
 
     @Override
     public void run(String[] args) throws IOException {
@@ -24,10 +24,10 @@ public class MainCrossedWiresPart2 extends MainAdventOfCodeRunner2019 {
         String pathForWire1 = listOfWirePaths.get(0);
         String pathForWire2 = listOfWirePaths.get(1);
 
-        int minDistanceToIntersection = crossedWires.calculate(pathForWire1, pathForWire2);
+        int minStepToIntersection = crossedWires.calculate(pathForWire1, pathForWire2);
 
         logger.info("What is the fewest combined steps the wires must take to reach an intersection?");
-        logger.info("Result = '" + minDistanceToIntersection + "'");
+        logger.info("Result = '" + minStepToIntersection + "'");
     }
 
 }
