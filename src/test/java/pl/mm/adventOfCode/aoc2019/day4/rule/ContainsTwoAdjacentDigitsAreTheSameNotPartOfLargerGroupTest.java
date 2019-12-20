@@ -18,7 +18,8 @@ public class ContainsTwoAdjacentDigitsAreTheSameNotPartOfLargerGroupTest {
         return new Object[][] {
                 {112233, true},
                 {123444, false},
-                {111122, true}
+                {111122, true},
+                {111222, false}
         };
     }
 

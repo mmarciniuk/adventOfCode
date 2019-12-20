@@ -1,11 +1,13 @@
 package pl.mm.adventOfCode.aoc2019.day4;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.aoc2019.day4.rule.Rule;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Scope("prototype")
 @Component
 public class NumberOfPossiblePasswordsWithinTheRangeImpl implements NumberOfPossiblePasswordsWithinTheRange {
 
