@@ -12,7 +12,7 @@ import java.util.List;
 public class MainProgramAlarmPart1 extends MainAdventOfCodeRunner2019 {
 
     @Autowired
-    private IntCodeProgramImpl intCodeProgram;
+    private IntCodeProgram intCodeProgram;
     @Autowired
     private StringListToIntArrayImpl stringListToIntArray;
 
