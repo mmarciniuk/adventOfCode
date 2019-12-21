@@ -1,57 +1,34 @@
 package pl.mm.adventOfCode.aoc2019.day2;
 
 import org.springframework.stereotype.Component;
+import pl.mm.adventOfCode.aoc2019.day2.opCode.AddCode;
+import pl.mm.adventOfCode.aoc2019.day2.opCode.ExitCode;
+import pl.mm.adventOfCode.aoc2019.day2.opCode.MultipliesCode;
+import pl.mm.adventOfCode.aoc2019.day2.opCode.OpCode;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Component
 public class IntCodeProgramImpl implements IntCodeProgram {
 
-    private boolean checkIfInArrayRange(int[] array, int index) {
-        return index >= 0 && index <= array.length;
-    }
-
-    private int getNumber(int[] array, int index) {
-        int newIndex = array[index];
-        if (this.checkIfInArrayRange(array, newIndex)) {
-            return array[newIndex];
-        } else {
-            return array[index];
-        }
-    }
-
-    private int getProperPositionOfResultIndex(int[] array, int index) {
-        int newIndex = array[index];
-        if (this.checkIfInArrayRange(array, newIndex)) {
-            return newIndex;
-        }
-        return index;
-    }
+    List<OpCode> opCodeList = Arrays.asList(new ExitCode(), new AddCode(), new MultipliesCode());
 
     @Override
     public int[] execute(int[] input) {
         int[] result = Arrays.copyOf(input, input.length);
-
-        for (int i = 0; i < result.length; i += 4) {
-            int operationCode = result[i];
-
-            if (EXIT_CODE == operationCode)
-                break;
-
-            int number1 = getNumber(result, i + 1);
-            int number2 = getNumber(result, i + 2);
-            int positionOfResult = getProperPositionOfResultIndex(result, i + 3);
-
-            switch (operationCode) {
-                case ADD_CODE:
-                    result[positionOfResult] = number1 + number2;
-                    break;
-                case MULTIPLIES_CODE:
-                    result[positionOfResult] = number1 * number2;
+        boolean exit = false;
+        for (int index = 0; index < result.length; index += 4) {
+            for (OpCode opCode : opCodeList) {
+                result = opCode.executeOpCode(result, index);
+                exit = opCode.isExit();
+                if (opCode.isOpCodeExecuted())
                     break;
             }
-        }
 
+            if (exit)
+                break;
+        }
         return result;
     }
 

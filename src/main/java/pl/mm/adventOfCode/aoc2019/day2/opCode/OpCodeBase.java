@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.aoc2019.day2v2.opCode;
+package pl.mm.adventOfCode.aoc2019.day2.opCode;
 
 public abstract class OpCodeBase implements OpCode {
 
