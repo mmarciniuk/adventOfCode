@@ -3,18 +3,16 @@ package pl.mm.adventOfCode.aoc2019.day2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
-import pl.mm.adventOfCode.MainAdventOfCodeRunnerBase;
-import pl.mm.adventOfCode.helpers.LoadTxtFile;
+import pl.mm.adventOfCode.aoc2019.MainAdventOfCodeRunner2019;
+import pl.mm.adventOfCode.utilities.string.StringListToIntArrayImpl;
 
 import java.util.List;
 
 @Component
-public class MainProgramAlarmPart1 extends MainAdventOfCodeRunnerBase {
+public class MainProgramAlarmPart1 extends MainAdventOfCodeRunner2019 {
 
     @Autowired
     private IntCodeProgramImpl intCodeProgram;
-    @Autowired
-    private LoadTxtFile loadTxtFile;
     @Autowired
     private StringListToIntArrayImpl stringListToIntArray;
 

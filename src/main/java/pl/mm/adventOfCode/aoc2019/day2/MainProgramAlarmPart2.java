@@ -4,7 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.MainAdventOfCodeRunnerBase;
-import pl.mm.adventOfCode.helpers.LoadTxtFile;
+import pl.mm.adventOfCode.utilities.loadFile.LoadTxtFile;
+import pl.mm.adventOfCode.utilities.string.StringListToIntArrayImpl;
 
 import java.util.List;
 

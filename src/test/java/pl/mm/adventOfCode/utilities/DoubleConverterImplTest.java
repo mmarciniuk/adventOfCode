@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.helpers;
+package pl.mm.adventOfCode.utilities;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.mm.adventOfCode.BaseTest;
 import pl.mm.adventOfCode.Main;
-import pl.mm.adventOfCode.aoc2019.day1.DoubleConverterImpl;
+import pl.mm.adventOfCode.utilities.converter.DoubleConverterImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.aoc2019.MainAdventOfCodeRunner2019;
-import pl.mm.adventOfCode.helpers.LoadTxtFile;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,10 +11,6 @@ import java.util.List;
 @Component
 public class MainTheTyrannyOfTheRocketEquationPart2 extends MainAdventOfCodeRunner2019 {
 
-    @Autowired
-    private LoadTxtFile loadTxtFile;
-    @Autowired
-    private DoubleConverterImpl doubleConverter;
     @Autowired
     private RocketEquationDay1Part2 rocketEquationDay1Part2;
 

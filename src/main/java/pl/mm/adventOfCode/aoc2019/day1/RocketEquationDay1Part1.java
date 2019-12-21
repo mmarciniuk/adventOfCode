@@ -5,17 +5,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class RocketEquationDay1Part1 implements IRocketEquation {
+public class RocketEquationDay1Part1 implements RocketEquation {
 
     private double totalFuelRequired = 0;
-
-    public double getTotalFuelRequired() {
-        return totalFuelRequired;
-    }
-
-    public void resetTotalFuelRaredToZero() {
-        this.totalFuelRequired = 0;
-    }
 
     @Override
     public double calculatedRequiredFuelForModuleAndAddToTotal(double massOfModule) {

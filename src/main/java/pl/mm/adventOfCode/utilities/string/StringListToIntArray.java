@@ -1,6 +1,6 @@
-package pl.mm.adventOfCode.aoc2019.day2;
+package pl.mm.adventOfCode.utilities.string;
 
-import pl.mm.adventOfCode.helpers.Converter;
+import pl.mm.adventOfCode.utilities.converter.Converter;
 
 import java.util.List;
 

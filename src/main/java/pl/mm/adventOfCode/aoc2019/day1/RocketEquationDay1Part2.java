@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class RocketEquationDay1Part2 implements IRocketEquation {
+public class RocketEquationDay1Part2 implements RocketEquation {
 
     @Override
     public double calculatedRequiredFuelForModuleAndAddToTotal(double massOfModule) {

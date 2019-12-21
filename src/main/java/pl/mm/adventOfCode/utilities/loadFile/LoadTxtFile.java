@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.helpers;
+package pl.mm.adventOfCode.utilities.loadFile;
 
 import org.springframework.stereotype.Component;
 

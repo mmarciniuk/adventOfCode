@@ -1,4 +1,4 @@
-package pl.mm.adventOfCode.aoc2019.day1;
+package pl.mm.adventOfCode.utilities.converter;
 
 import org.springframework.stereotype.Component;
 
@@ -14,7 +14,7 @@ public class DoubleConverterImpl implements DoubleConverter {
         for (String line : stringList) {
             try {
                 doubleList.add(Double.parseDouble(line));
-            }catch (Exception ignore){
+            } catch (Exception ignore) {
             }
         }
         return doubleList;
