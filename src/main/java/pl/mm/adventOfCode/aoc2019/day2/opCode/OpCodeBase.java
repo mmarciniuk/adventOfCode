@@ -2,7 +2,7 @@ package pl.mm.adventOfCode.aoc2019.day2.opCode;
 
 public abstract class OpCodeBase implements OpCode {
 
-    protected boolean exit = false;
+    protected int incrementer = 1;
     protected boolean opCodeExecuted = false;
     protected int opCode;
 
@@ -10,9 +10,14 @@ public abstract class OpCodeBase implements OpCode {
         this.opCode = opCode;
     }
 
+    protected OpCodeBase (int opCode, int incrementer) {
+        this(opCode);
+        this.incrementer = incrementer;
+    }
+
     @Override
-    public boolean isExit() {
-        return this.exit;
+    public int getIncrementer() {
+        return this.incrementer;
     }
 
     @Override

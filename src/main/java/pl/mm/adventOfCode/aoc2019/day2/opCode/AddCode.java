@@ -3,7 +3,7 @@ package pl.mm.adventOfCode.aoc2019.day2.opCode;
 public class AddCode extends OpCodeBase {
 
     public AddCode() {
-        super(1);
+        super(1, 4);
     }
 
     @Override

@@ -8,7 +8,7 @@ public class ExitCode extends OpCodeBase {
 
     @Override
     protected int[] delegateExecuteOpCode(int[] tableWithCodes, int index) {
-        this.exit = true;
+        this.incrementer += tableWithCodes.length;
         return tableWithCodes;
     }
 
