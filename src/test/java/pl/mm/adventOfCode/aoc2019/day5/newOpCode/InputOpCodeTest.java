@@ -3,7 +3,7 @@ package pl.mm.adventOfCode.aoc2019.day5.newOpCode;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pl.mm.adventOfCode.aoc2019.day2.opCode.OpCode;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.OpCode;
 
 public class InputOpCodeTest {
 

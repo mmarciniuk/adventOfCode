@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import pl.mm.adventOfCode.aoc2019.MainAdventOfCodeRunner2019;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.IntCodeProgram;
 import pl.mm.adventOfCode.utilities.string.StringListToIntArrayImpl;
 
 import java.util.List;

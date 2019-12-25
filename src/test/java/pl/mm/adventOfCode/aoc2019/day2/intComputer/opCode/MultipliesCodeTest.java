@@ -1,14 +1,15 @@
-package pl.mm.adventOfCode.aoc2019.day2.opCode;
+package pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.MultipliesCode;
 
-public class AddCodeTest {
+public class MultipliesCodeTest {
 
     @Test(dataProvider = "testDataProvider")
     public void testExecuteOpCodeImpl(int[] input, int[] expected, boolean isExitExpected, boolean isOpCodeExecutedExpected) {
-        AddCode opCode = new AddCode();
+        MultipliesCode opCode = new MultipliesCode();
         int[] result = opCode.executeOpCode(input, 0);
         Assert.assertEquals(result, expected);
         //Assert.assertEquals(opCode.isExit(), isExitExpected);
@@ -18,9 +19,9 @@ public class AddCodeTest {
     @DataProvider(name = "testDataProvider")
     public Object[][] testDataProvider() {
         return new Object[][]{
-                {new int[]{1, 5, 5, 3}, new int[]{1, 5, 5, 10}, false, true},
-                {new int[]{1, 2, 2, 3}, new int[]{1, 2, 2, 4}, false, true},
-                {new int[]{1, 2, -2, 3}, new int[]{1, 2, -2, -4}, false, true},
+                {new int[]{2, 9, 9, 3}, new int[]{2, 9, 9, 81}, false, true},
+                {new int[]{2, 2, 2, 3}, new int[]{2, 2, 2, 4}, false, true},
+                {new int[]{2, 2, -2, 3}, new int[]{2, 2, -2, 4}, false, true},
         };
     }
 

@@ -1,9 +1,9 @@
-package pl.mm.adventOfCode.aoc2019.day2.opCode;
+package pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode;
 
-public class MultipliesCode extends OpCodeBase {
+public class AddCode extends OpCodeBase {
 
-    public MultipliesCode() {
-        super(2, 4);
+    public AddCode() {
+        super(1, 4);
     }
 
     @Override
@@ -11,7 +11,7 @@ public class MultipliesCode extends OpCodeBase {
         int number1 = getNumber(tableWithCodes, index + 1);
         int number2 = getNumber(tableWithCodes, index + 2);
         int indexForTheResult = findProperIndexForTheResult(tableWithCodes, index + 3);
-        tableWithCodes[indexForTheResult] = number1 * number2;
+        tableWithCodes[indexForTheResult] = number1 + number2;
         return tableWithCodes;
     }
 

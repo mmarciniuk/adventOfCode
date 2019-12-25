@@ -1,10 +1,10 @@
-package pl.mm.adventOfCode.aoc2019.day2;
+package pl.mm.adventOfCode.aoc2019.day2.intComputer;
 
 import org.springframework.stereotype.Component;
-import pl.mm.adventOfCode.aoc2019.day2.opCode.AddCode;
-import pl.mm.adventOfCode.aoc2019.day2.opCode.ExitCode;
-import pl.mm.adventOfCode.aoc2019.day2.opCode.MultipliesCode;
-import pl.mm.adventOfCode.aoc2019.day2.opCode.OpCode;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.AddCode;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.ExitCode;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.MultipliesCode;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.OpCode;
 
 import java.util.Arrays;
 import java.util.List;

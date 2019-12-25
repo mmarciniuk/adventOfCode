@@ -1,6 +1,6 @@
 package pl.mm.adventOfCode.aoc2019.day5.newOpCode;
 
-import pl.mm.adventOfCode.aoc2019.day2.opCode.OpCodeBase;
+import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.OpCodeBase;
 
 public class InputOpCode extends OpCodeBase {
 
