@@ -2,6 +2,7 @@ package pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode;
 
 public abstract class OpCodeBase implements OpCode {
 
+    protected Mode mode = Mode.POSITION_MODE;
     protected int incrementer = 1;
     protected boolean opCodeExecuted = false;
     protected int opCode;
@@ -10,9 +11,15 @@ public abstract class OpCodeBase implements OpCode {
         this.opCode = opCode;
     }
 
-    protected OpCodeBase (int opCode, int incrementer) {
+    protected OpCodeBase(int opCode, int incrementer) {
         this(opCode);
         this.incrementer = incrementer;
+    }
+
+    @Override
+    public OpCode setMode(Mode mode) {
+        this.mode = mode;
+        return this;
     }
 
     @Override
@@ -47,21 +54,29 @@ public abstract class OpCodeBase implements OpCode {
         return index >= 0 && index <= tableWithCodes.length;
     }
 
-    protected int getNumber(int[] tableWithCodes, int index) {
-        int newIndex = tableWithCodes[index];
-        if (this.checkIfIndexIsInRangeOfTable(tableWithCodes, newIndex)) {
-            return tableWithCodes[newIndex];
+    protected int getNumberFromProperIndexOfTable(int[] tableWithCodes, int index) {
+        if (this.mode == Mode.POSITION_MODE) {
+            int newIndex = tableWithCodes[index];
+            if (this.checkIfIndexIsInRangeOfTable(tableWithCodes, newIndex)) {
+                return tableWithCodes[newIndex];
+            } else {
+                return tableWithCodes[index];
+            }
         } else {
             return tableWithCodes[index];
         }
     }
 
     protected int findProperIndexForTheResult(int[] tableWithCodes, int index) {
-        int newIndex = tableWithCodes[index];
-        if (this.checkIfIndexIsInRangeOfTable(tableWithCodes, newIndex)) {
-            return newIndex;
+        if (this.mode == Mode.POSITION_MODE) {
+            int newIndex = tableWithCodes[index];
+            if (this.checkIfIndexIsInRangeOfTable(tableWithCodes, newIndex)) {
+                return newIndex;
+            }
+            return index;
+        } else {
+            return index;
         }
-        return index;
     }
 
 }
