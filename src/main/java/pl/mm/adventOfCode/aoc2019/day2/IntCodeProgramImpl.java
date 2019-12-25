@@ -17,17 +17,15 @@ public class IntCodeProgramImpl implements IntCodeProgram {
     @Override
     public int[] execute(int[] input) {
         int[] result = Arrays.copyOf(input, input.length);
-        boolean exit = false;
-        for (int index = 0; index < result.length; index += 4) {
+        int incrementer = 4;
+        for (int index = 0; index < result.length; index += incrementer) {
             for (OpCode opCode : opCodeList) {
                 result = opCode.executeOpCode(result, index);
-                exit = opCode.isExit();
-                if (opCode.isOpCodeExecuted())
+                if (opCode.isOpCodeExecuted()) {
+                    incrementer = opCode.getIncrementer();
                     break;
+                }
             }
-
-            if (exit)
-                break;
         }
         return result;
     }
