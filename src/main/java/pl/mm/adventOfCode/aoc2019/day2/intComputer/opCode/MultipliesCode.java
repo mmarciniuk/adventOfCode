@@ -3,7 +3,7 @@ package pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode;
 public class MultipliesCode extends OpCodeBase {
 
     public MultipliesCode() {
-        super(2, 4);
+        super(2, 3);
     }
 
     @Override

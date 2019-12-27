@@ -10,4 +10,7 @@ public enum Mode {
         this.modeNumber = modeNumber;
     }
 
+    public int getModeNumber() {
+        return modeNumber;
+    }
 }

@@ -7,7 +7,7 @@ public class InputOpCode extends OpCodeBase {
     private int input;
 
     public InputOpCode(int input) {
-        super(3, 2);
+        super(3, 1);
         this.input = input;
     }
 

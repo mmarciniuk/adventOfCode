@@ -6,8 +6,6 @@ public interface OpCode {
 
     int getIncrementer();
 
-    OpCode setMode(Mode mode);
-
     int[] executeOpCode(int[] tableWithCodes, int index);
 
     boolean isOpCodeExecuted();

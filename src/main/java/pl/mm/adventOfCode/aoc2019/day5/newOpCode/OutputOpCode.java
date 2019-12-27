@@ -7,7 +7,7 @@ public class OutputOpCode extends OpCodeBase {
     private int output = 0;
 
     public OutputOpCode() {
-        super(4, 2);
+        super(4, 1);
     }
 
     public int getOutput() {

@@ -8,7 +8,7 @@ public class MultipliesCodeTest {
 
     @Test(dataProvider = "testDataProvider")
     public void testExecuteOpCodeImpl(int[] input, int[] expected, boolean isOpCodeExecutedExpected, Mode mode) {
-        MultipliesCode opCode = (MultipliesCode) new MultipliesCode().setMode(mode);
+        MultipliesCode opCode = new MultipliesCode();
         int[] result = opCode.executeOpCode(input, 0);
         Assert.assertEquals(result, expected);
         Assert.assertEquals(opCode.isOpCodeExecuted(), isOpCodeExecutedExpected);
