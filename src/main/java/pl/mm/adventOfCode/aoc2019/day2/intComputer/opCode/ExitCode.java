@@ -5,7 +5,12 @@ public class ExitCode extends OpCodeBase {
     private boolean exit = false;
 
     public ExitCode() {
-        super(99, 0);
+        super(99, 2, 0);
+    }
+
+    @Override
+    protected void clearParameterListAndLoadParameters(int[] tableWithCodes, int index) {
+        this.parameterList.clear();
     }
 
     @Override

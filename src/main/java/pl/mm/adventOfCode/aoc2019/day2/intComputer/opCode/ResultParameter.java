@@ -9,11 +9,12 @@ public class ResultParameter extends ParameterBase {
     @Override
     public int getValue() {
         if (this.mode == Mode.POSITION_MODE) {
-            int newIndex = this.tableWithCodes[this.index];
-            if (checkIfIndexIsInRangeOfTable(this.tableWithCodes, newIndex)) {
-                newIndex = this.index;
+            int newIndex = tableWithCodes[index];
+            if (this.checkIfIndexIsInRangeOfTable(tableWithCodes, newIndex)) {
+                return tableWithCodes[newIndex];
+            } else {
+                return tableWithCodes[index];
             }
-            return tableWithCodes[newIndex];
         } else {
             return this.index;
         }

@@ -5,6 +5,8 @@ import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.AddCode;
 import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.ExitCode;
 import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.MultipliesCode;
 import pl.mm.adventOfCode.aoc2019.day2.intComputer.opCode.OpCode;
+import pl.mm.adventOfCode.aoc2019.day5.newOpCode.InputOpCode;
+import pl.mm.adventOfCode.aoc2019.day5.newOpCode.OutputOpCode;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +14,8 @@ import java.util.List;
 @Component
 public class IntCodeProgramImpl implements IntCodeProgram {
 
-    private List<OpCode> opCodeList = Arrays.asList(new ExitCode(), new AddCode(), new MultipliesCode());
+    private List<OpCode> opCodeList = Arrays.asList(new ExitCode(), new AddCode(), new MultipliesCode(),
+            new InputOpCode(1), new OutputOpCode());
 
     @Override
     public int[] execute(int[] input) {
