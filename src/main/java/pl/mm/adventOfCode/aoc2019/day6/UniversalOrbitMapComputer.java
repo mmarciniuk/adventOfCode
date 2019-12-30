@@ -6,4 +6,6 @@ public interface UniversalOrbitMapComputer {
 
     int calculateNumberOfOrbits(List<String> spaceObjectInputMap);
 
+    int numberOfOrbitalTransferFromSourceToDestination(List<String> spaceObjectInputMap, String source, String destination);
+
 }

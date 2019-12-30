@@ -19,8 +19,24 @@ public class UniversalOrbitMapComputerImplTest {
 
     @DataProvider(name = "testDataProvider")
     public Object[][] testDataProvider() {
-        return new Object[][] {
-                {new ArrayList<>(Arrays.asList("COM)B","B)C","C)D","D)E","E)F","B)G","G)H","D)I","E)J","J)K","K)L")), 42}
+        return new Object[][]{
+                {new ArrayList<>(Arrays.asList("COM)B", "B)C", "C)D", "D)E", "E)F", "B)G", "G)H", "D)I", "E)J", "J)K", "K)L")), 42}
+        };
+    }
+
+    @Test(dataProvider = "testDataProviderOrbitalTransfer")
+    public void testNumberOfOrbitalTransferFromSourceToDestination(List<String> inputMap, String source,
+                                                                   String destination, int expectedResult) {
+        UniversalOrbitMapComputerImpl orbitMapComputer = new UniversalOrbitMapComputerImpl();
+        int numberOfOrbitalTransfer = orbitMapComputer.numberOfOrbitalTransferFromSourceToDestination(inputMap, source, destination);
+        Assert.assertEquals(numberOfOrbitalTransfer, expectedResult);
+    }
+
+    @DataProvider(name = "testDataProviderOrbitalTransfer")
+    public Object[][] testDataProviderOrbitalTransfer() {
+        return new Object[][]{
+                {new ArrayList<>(Arrays.asList("COM)B", "B)C", "C)D", "D)E", "E)F", "B)G", "G)H", "D)I", "E)J", "J)K", "K)L", "K)YOU", "I)SAN")),
+                        "YOU", "SAN", 4}
         };
     }
 
